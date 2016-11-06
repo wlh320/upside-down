@@ -1,9 +1,9 @@
 # -*- coding:utf-8 -*-
 # author: W0h
-# just for fun!
-ori = 'zyxwvutsrqponmlkjihgfedcbaVRFBCDEFJMW.?!,\'/\\><(){}^;_'
-ud = 'zʎxʍʌnʇsɹbdouɯןʞɾıɥbɟǝpɔqɐɅᴚℲᗺƆᗡƎᖵſWM˙¿¡\',\\/<>)(}{ᵥ؛‾'
-same = ' HIOXS(|:#=+-*~'
+# Not for use. just for fun!
+ori = 'zyxwvutsrqponmlkjihgfedcbaVRFBCDEFJMW.?!,\'><(){}^;_'
+ud = 'zʎxʍʌnʇsɹbdouɯןʞɾıɥbɟǝpɔqɐɅᴚℲᗺƆᗡƎᖵſWM˙¿¡\',<>)(}{ᵥ؛‾'
+same = ' HIOXS(|:#=+-*~/\\'
 s = input('input a string:')
 s = s[-1::-1]
 res = ''
