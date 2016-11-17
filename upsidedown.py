@@ -1,17 +1,27 @@
+#!/usr/bin/env python
 # -*- coding:utf-8 -*-
-# author: W0h
-# Not for use. just for fun!
-ori = 'zyxwvutsrqponmlkjihgfedcbaVRFBCDEFJMW.?!,\'><(){}^;_'
-ud = 'zʎxʍʌnʇsɹbdouɯןʞɾıɥbɟǝpɔqɐɅᴚℲᗺƆᗡƎᖵſWM˙¿¡\',<>)(}{ᵥ؛‾'
-same = ' HIOXS(|:#=+-*~/\\'
-s = input('input a string:')
-s = s[-1::-1]
-res = ''
-for i in s:
-    if i in same:
-        res += i
-    elif i in ori:
-        res += ud[ori.index(i)]
-    else:  # cannot transform
-        res += '#'
-print(res)
+"""make a sentence upside-down"""
+
+ORIGIN = 'zyxwvutsrqponmlkjihgfedcbaVRFBCDEFJMW.?!,\'><(){}^;_'
+NEW = 'zʎxʍʌnʇsɹbdouɯןʞɾıɥbɟǝpɔqɐɅᴚℲᗺƆᗡƎᖵſWM˙¿¡\',<>)(}{ᵥ؛‾'
+SAME = ' HIOXS(|:#=+-*~/\\'
+
+def transform(src):
+    """upside-down a sentence"""
+
+    src = src[-1::-1] # reverse
+    res = ''
+    for i in src:
+        if i in SAME:
+            res += i
+        elif i in ORIGIN:
+            res += NEW[ORIGIN.index(i)]
+        else:  # cannot transform
+            res += '#'
+    return res
+
+
+if __name__ == '__main__':
+    s = input('input a string:')
+    result = transform(s)
+    print('upside-down:', result)
